@@ -152,10 +152,16 @@ if (window.location.pathname.includes("cart.html")) {
     .then(res => res.json())
     .then(data => {
       productsData = data;
+
+      // 🔥 ensure cart is fresh from storage
+      cart = JSON.parse(localStorage.getItem("cart")) || [];
+
       renderCart();
+    })
+    .catch(err => {
+      console.error("Error loading products:", err);
     });
 }
-
 
 // REMOVE ITEM
 function removeItem(id) {
