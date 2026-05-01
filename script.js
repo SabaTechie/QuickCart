@@ -77,7 +77,7 @@ updateCartCount();
 function renderCart() {
   const container = document.getElementById("cart-items");
   const totalEl = document.getElementById("total");
-  const checkoutBtn = document.getElementById("checkout-btn"); // 🔥 important
+  const checkoutBtn = document.getElementById("checkout-btn");
 
   if (!container) return;
 
@@ -96,13 +96,12 @@ function renderCart() {
 
     totalEl.innerText = "";
 
-    // ❌ Hide checkout button
     if (checkoutBtn) checkoutBtn.style.display = "none";
 
     return;
   }
 
-  // ✔ SHOW checkout button if items exist
+  // ✔ SHOW checkout button
   if (checkoutBtn) checkoutBtn.style.display = "block";
 
   let total = 0;
@@ -110,57 +109,54 @@ function renderCart() {
   cart.forEach(item => {
     const product = productsData.find(p => p.id === item.id);
 
-    if (product) {
-      const itemTotal = product.price * item.qty;
-      total += itemTotal;
+    // 🔥 CRITICAL FIX (prevents empty cart bug)
+    if (!product) return;
 
-      container.innerHTML += `
-        <div class="cart-card">
+    const itemTotal = product.price * item.qty;
+    total += itemTotal;
 
-          <img src="${product.image}" class="cart-img" />
+    container.innerHTML += `
+      <div class="cart-card">
 
-          <div class="cart-info">
+        <img src="${product.image}" class="cart-img" />
 
-            <h3>${product.name}</h3>
+        <div class="cart-info">
 
-            <p class="price">₹${product.price}</p>
+          <h3>${product.name}</h3>
 
-            <div class="qty-controls">
-              <button onclick="changeQty(${product.id}, -1)">➖</button>
-              <span>${item.qty}</span>
-              <button onclick="changeQty(${product.id}, 1)">➕</button>
-            </div>
+          <p class="price">₹${product.price}</p>
 
-            <p class="item-total">Total: ₹${itemTotal}</p>
-
-            <button class="remove-btn" onclick="removeItem(${product.id})">
-              Remove
-            </button>
-
+          <div class="qty-controls">
+            <button onclick="changeQty(${product.id}, -1)">➖</button>
+            <span>${item.qty}</span>
+            <button onclick="changeQty(${product.id}, 1)">➕</button>
           </div>
 
+          <p class="item-total">Total: ₹${itemTotal}</p>
+
+          <button class="remove-btn" onclick="removeItem(${product.id})">
+            Remove
+          </button>
+
         </div>
-      `;
-    }
+
+      </div>
+    `;
   });
 
   totalEl.innerText = "Total: ₹" + total;
 }
 // LOAD CART PAGE
-if (window.location.pathname.includes("cart.html")) {
+if (document.getElementById("cart-items")) {
+  cart = JSON.parse(localStorage.getItem("cart")) || [];
+
   fetch("products.json")
     .then(res => res.json())
     .then(data => {
       productsData = data;
-
-      // 🔥 ensure cart is fresh from storage
-      cart = JSON.parse(localStorage.getItem("cart")) || [];
-
       renderCart();
     })
-    .catch(err => {
-      console.error("Error loading products:", err);
-    });
+    .catch(err => console.error(err));
 }
 
 // REMOVE ITEM
