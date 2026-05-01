@@ -1,0 +1,94 @@
+
+[
+  {
+    "id": 1,
+    "name": "T-Shirt",
+    "price": 499,
+    "image": "images/tshirt.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "Shoes",
+    "price": 829,
+    "image": "images/shoes.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Watch",
+    "price": 1239,
+    "image": "images/watch.jpeg"
+  },
+
+  {
+    "id": 4,
+    "name": "Perfume",
+    "price": 800,
+    "image": "images/perfume.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "TV",
+    "price": 42999,
+    "image": "images/tv.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "Fridge",
+    "price": 25999,
+    "image": "images/fridge.jpeg"
+  },
+  {
+    "id": 7,
+    "name": "AC",
+    "price": 32999,
+    "image": "images/ac.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "Bed",
+    "price": 21999,
+    "image": "images/bed.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "Earrings",
+    "price": 199,
+    "image": "images/earrings.jpeg"
+  },
+  {
+    "id": 10,
+    "name": "Saree",
+    "price": 3999,
+    "image": "images/saree.jpeg"
+  },
+  {
+    "id": 11,
+    "name": "Curtains",
+    "price": 1199,
+    "image": "images/curtains.jpeg"
+  },
+  {
+    "id": 12,
+    "name": "Bracelet",
+    "price": 499,
+    "image": "images/bracelet.jpeg"
+  },
+  {
+    "id": 13,
+    "name": "Ring",
+    "price": 199,
+    "image": "images/ring.jpeg"
+  },
+  {
+    "id": 14,
+    "name": "Mobile",
+    "price": 18999,
+    "image": "images/mobile.jpeg"
+  },
+  {
+    "id": 15,
+    "name": "Bed Sheets",
+    "price": 999,
+    "image": "images/bedsheet.jpeg"
+  }
+]
