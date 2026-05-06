@@ -10,6 +10,14 @@ This project was developed as a major project to demonstrate full-stack web deve
 
 ---
 
+# Live Demo
+
+Frontend: https://my-storeee.netlify.app
+
+Backend: https://quickcart-ykr7.onrender.com
+
+---
+
 # Features
 
 - User Signup & Login
@@ -89,6 +97,7 @@ git clone https://github.com/SabaTechie/QuickCart.git
 # Backend Setup
 
 ## Step 1
+
 Open backend folder
 
 ```bash
@@ -96,6 +105,7 @@ cd backend
 ```
 
 ## Step 2
+
 Install dependencies
 
 ```bash
@@ -103,6 +113,7 @@ npm install
 ```
 
 ## Step 3
+
 Create `.env` file
 
 ```env
@@ -111,6 +122,7 @@ JWT_SECRET=your_secret_key
 ```
 
 ## Step 4
+
 Run backend server
 
 ```bash
