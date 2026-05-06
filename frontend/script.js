@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 //LOADING PRODUCTS FROM BACKEND API
-  fetch("http://localhost:5000/api/products")
+  fetch("https://quickcart-ykr7.onrender.com/api/products")
     .then(res => res.json())
     .then(data => {
       productsData = data;
@@ -258,7 +258,7 @@ function login() {
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
-  fetch("http://localhost:5000/api/auth/login", {
+  fetch("https://quickcart-ykr7.onrender.com/api/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -339,7 +339,7 @@ function placeOrder() {
 //Function for order API
 function completeOrder(token, fullAddress, total, payment) {
 
-  fetch("http://localhost:5000/api/order/place", {
+  fetch("https://quickcart-ykr7.onrender.com/api/order/place", {
 
     method: "POST",
 
@@ -412,7 +412,7 @@ function signup() {
     return;
   }
 
-  fetch("http://localhost:5000/api/auth/signup", {
+  fetch("https://quickcart-ykr7.onrender.com/api/auth/signup", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
