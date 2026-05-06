@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="no-search"> 
+
+<!-- NAVBAR-->
+<header>
+  <nav class="navbar">
+    <div class="logo">My Store</div>
+
+    <div class="search-box">
+      <input 
+        type="text" 
+        id="search" 
+        placeholder="Search for products..." 
+        onkeyup="searchProduct()"
+      />
+      <button onclick="searchProduct()">Search 🔍</button>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="cart.html">
+        Cart (<span id="cart-count">0</span>)
+      </a>
+      <a href="login.html">Login</a>
+    </div>
+  </nav>
+</header>
+
+
+<h1>Your Cart</h1>
+
+<div id="cart-items"></div>
+
+<h2 id="total"></h2>
+
+<div style="text-align:center; margin: 20px;">
+  
+  <button id="checkout-btn" onclick="goToCheckout()">
+  Proceed to Checkout
+</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body class="no-search">
+
+<!--  NAVBAR -->
+<header>
+  <nav class="navbar">
+    <div class="logo">My Store</div>
+
+    <div class="search-box">
+      <input 
+        type="text" 
+        id="search" 
+        placeholder="Search for products..." 
+        onkeyup="searchProduct()"
+      />
+      <button onclick="searchProduct()">Search🔍</button>
+    </div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="cart.html">
+        Cart (<span id="cart-count">0</span>)
+      </a>
+      <a href="login.html">Login</a>
+    </div>
+  </nav>
+</header>
+
+<!-- PAGE TITLE -->
+<h2>Checkout</h2>
+
+<!-- CHECKOUT -->
+<div class="checkout-container">
+
+  <div class="checkout-card">
+
+    <h3>Delivery Address</h3>
+
+    <input id="name" placeholder="Full Name">
+    <input id="address" placeholder="Address">
+    <input id="city" placeholder="City">
+
+    <h3>Payment Method</h3>
+
+
+
+
+    <select id="payment">
+  <option value="COD">Cash on Delivery</option>
+  <option value="ONLINE">Online Payment</option>
+</select>
+
+<button onclick="placeOrder()">Place Order</button>
+
+
+    
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

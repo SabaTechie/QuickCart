@@ -1,0 +1,41 @@
+<body>
+  <header><header>
+  <nav class="navbar">
+    <div class="logo">My Store</div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="#" onclick="viewCart()">
+  Cart (<span id="cart-count">0</span>)
+</a>
+      <a href="login.html" id="auth-link">Login</a>
+    </div>
+  </nav>
+</header></header>
+<link rel="stylesheet" href="style.css">
+
+<div class="auth-container">
+
+  <div class="auth-card">
+    <h2>Continue Shopping</h2>
+
+    <label>Email</label>
+    <input id="email" type="email" placeholder="Enter a valid email">
+
+    <label>Password</label>
+    <input id="password" type="password" placeholder="Password">
+
+    <p class="forgot">Forgot password?</p>
+
+    <button class="auth-btn" onclick="login()">Login</button>
+
+    <button class="google-btn">𝐆 Login in with Google</button>
+
+    <p class="switch">
+      Don't have an account? <a href="signup.html">Sign Up</a>
+    </p>
+  </div>
+
+</div>
+<script src="script.js"></script>
+</body>
